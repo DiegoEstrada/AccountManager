@@ -1,3 +1,7 @@
+#Scripts  related to database
+
+scripts_amdb_DB/
+
 # Logs
 logs
 *.log
