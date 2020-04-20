@@ -1,13 +1,12 @@
-const express = require("express");
 
+const loader = require('./loaders/index');
 
-const  SERVER_PORT = 3000;
+accountManager = loader.startApp();
 
-var app = express();
-
-app.set('port',process.env.SERVER_PORT || SERVER_PORT)
-
-app.listen(app.get('port'),()=>{
-    console.log("Server started in "+ app.get('port'));
+accountManager.then((status)=>{
+    console.log("Account Manager Started at "+Date() + " Status : "+status)
+}, (error)=>{
+    console.error("Something went wrong at starting the app");
+    console.error(error);
 });
 
