@@ -1,17 +1,30 @@
 const dotenv = require('dotenv');
+const envFound = dotenv.config({path: __dirname + '/.env'});
+//console.log(__dirname)
 
-const envFound = dotenv.config();
-
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-
-if( !envFound ){
-    console.error("File .env not found");
+if( envFound.error ){
+    console.error(envFound.error);
     throw new Error(" Not .env File");
 }else{
-    //OK
+    process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
     module.exports = {
         port : parseInt(process.env.PORT) || 3000,
-        hostname : process.env.HOSTNAME || 'localhost'
+        hostname : process.env.HOSTNAME || 'localhost',
+        db_protocol : process.env.DB_PROTOCOL,
+        db_hostname : process.env.DB_HOSTNAME,
+        db_port : process.env.DB_PORT,
+        db_name : process.env.DB_NAME,
+        db_user : process.env.DB_USER,
+        db_pwd : process.env.DB_PWD,
+        dir_log_info : process.env.LOG_INFO,
+        dir_log_debug : process.env.LOG_DEBUG,
+        dir_log_warn : process.env.LOG_WARN,
+        dir_log_error : process.env.LOG_ERROR,
+        dir_log : process.env.LOG
     }
+
 }
+
+
+
