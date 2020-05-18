@@ -2,6 +2,10 @@
 
 scripts_amdb_DB/
 
+logos/
+
+pending/
+
 # Logs
 logs
 *.log

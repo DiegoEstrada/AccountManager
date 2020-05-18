@@ -8,7 +8,7 @@ let logger;
 async function  startComponents() {
     logger = await startLoggers();
 
-    dbConnection = await connectDB();
+    let dbConnection = await connectDB();
 
     let webServer = await startWebServer();
    
@@ -17,6 +17,8 @@ async function  startComponents() {
 
     return new Promise((resolve)=>{
         if(logger && webServer && dbConnection){
+            global.db = dbConnection;
+            global.logger = logger;
             resolve("Successfully");
         }else{
             resolve("Failed");

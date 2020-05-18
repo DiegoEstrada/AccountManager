@@ -1,0 +1,35 @@
+REDUX TUTORIAL
+https://www.youtube.com/watch?v=CVpUuw9XSjY
+
+A way to structure application
+
+https://hackernoon.com/how-to-structure-your-react-app-98c48e102aad
+
+
+Tips from integrate template Admin LTE to React 
+
+https://www.youtube.com/watch?v=6JUexp2DNVc
+
+Reated to dockerize 
+
+https://www.katacoda.com/courses/docker/deploying-first-container
+
+
+
+
+use this template fixed-sidebar.html
+
+
+video to routes
+https://tylermcginnis.com/react-router-protected-routes-authentication/
+youtube.com/watch?v=Y0-qdp-XBJg&feature=emb_rel_pause
+
+
+
+Rememenber that in JSX you have to print inside html elements just primitive objectes as strings, numbers booleans, etc, so your selectors must be passed as strings
+https://stackoverflow.com/questions/33117449/invariant-violation-objects-are-not-valid-as-a-react-child
+
+
+tutorial for asyn redux
+
+https://www.digitalocean.com/community/tutorials/redux-redux-thunk
