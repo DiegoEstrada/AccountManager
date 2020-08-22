@@ -1,5 +1,5 @@
 import React/* , { Component } */ from 'react'
-import {useSelector,useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 
 import {singIn} from '../actions/singInAction'
 
@@ -45,7 +45,7 @@ export default function  Form (){
                 <form onSubmit={handleSubmit} method="post">
 
                     <div className="input-group mb-3">
-                        <input id="input-user" type="text"    className="form-control" required="true" placeholder="Usuario" />
+                        <input id="input-user" type="text"    className="form-control" required="true" placeholder="Correo" />
                         <div className="input-group-append">
                             <div className="input-group-text">
                                 <span className="fas fa-envelope" />
@@ -63,14 +63,16 @@ export default function  Form (){
                     </div>
 
                     <div className="row">
-                        <div className="col-7">
+                         <div className="col-7">
+                             {/*
                             <div className="icheck-primary">
                                 <input type="checkbox" id="remember" />
                                 <label htmlFor="remember">
                                     Recuerdame
                                 </label>
                             </div>
-                        </div>
+                            */}
+                        </div> 
                         {/* /.col */}
                         <div className="col-5">
                             <button type="submit" /* onClick={handleChange} */ className="btn btn-primary btn-block">Iniciar sesión</button>

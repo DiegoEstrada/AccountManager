@@ -30,6 +30,6 @@ Rememenber that in JSX you have to print inside html elements just primitive obj
 https://stackoverflow.com/questions/33117449/invariant-violation-objects-are-not-valid-as-a-react-child
 
 
-tutorial for asyn redux
+tutorial for async redux
 
 https://www.digitalocean.com/community/tutorials/redux-redux-thunk

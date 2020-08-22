@@ -19,5 +19,10 @@ export const userConstants = {
 
     USER_NAME : "USER_NAME",
     ROLE : "ROLE",
-    ASSIGN_USER_TO_APP : "ASSIGN_USER_TO_APP"
+    ASSIGN_USER_TO_APP : "ASSIGN_USER_TO_APP",
+
+    USER_NAME_COOKIE_VALUE : "username",
+    LOGGED_COOKIE_VALUE : "isLogged",
+    TOKEN_COOKIE_VALUE : "webToken",
+    ROLE_COOKIE_VALUE : "role"
 };

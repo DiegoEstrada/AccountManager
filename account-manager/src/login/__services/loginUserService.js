@@ -8,7 +8,7 @@ function login(user,password){
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ "user" : user, "password" : password })
+        body: JSON.stringify({ "email" : user, "password" : password })
     };
 
     return fetch('/api/authentication/sing-in', requestOptions)

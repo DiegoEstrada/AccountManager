@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import {store,history} from './common/_helper';
+import {store} from './common/_helper';
+import { MapRoutes } from './routes'
 
 
 //import './index.css';
@@ -10,29 +10,15 @@ import {store,history} from './common/_helper';
 //import * as serviceWorker from './serviceWorker';
 
 
-//import {userConstants} from './__constants'
-
-
-
-import Login from './login/Login';
-import Home from './home/Home';
 
 
 ReactDOM.render(
   //<React.StrictMode>
+
   <Provider store={store}>
-
-
-  <Router history={history}>
-    <Switch>
-        {/* <PrivateRoute exact path="/" component={HomePage} /> */}
-        <Route path="/home" component={Home} />
-        <Route path="/sing-in" component={Login} />
-        <Redirect from="*" to="/" />
-    </Switch>
-  </Router>
-  
+    <MapRoutes></MapRoutes>
   </Provider>
+
     ,
   //</React.StrictMode>,
   document.getElementById('root')

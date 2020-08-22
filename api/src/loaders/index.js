@@ -6,9 +6,17 @@
         3 Connect to DB
 */
 
+/*
+    Additionaly in this section we'll connect the strategies for jwt authentication
+    Loaded by other scripts
+*/
+
 let logger = require('./winston');
 let webServer = require('../server/express');
 let mongodb = require('../db/mongo');
+
+let passportSettings = require('./passport');
+
 
 
 
@@ -32,6 +40,17 @@ module.exports.startWebServer = function startWebServer(){
     return new Promise((resolve)=>{
         if(webServer && typeof(webServer) != 'undefined' && webServer != null ){
             logger.info(`Web server started successfully at  ${webServer.server.address().address}:${webServer.server.address().port}`)
+            //Here starts the strategies intergation usin middleware with express
+            //console.log(webServer.app)
+            passportSettings().then(passportSetUp=>{
+                //Here we link the configurations made in passport.js script with the middleware
+                //console.log(passportSetUp)
+                webServer.app.use(passportSetUp.initialize());
+            }).catch(error =>{
+                logger.error('Error by setting up Passport Strategies');
+                logger.error(error);
+                
+            });
             resolve(webServer)
         }else{
             logger.error("Error starting web server")

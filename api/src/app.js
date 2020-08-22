@@ -5,20 +5,22 @@ let logger;
 
 
 
+
 async function  startComponents() {
     logger = await startLoggers();
-
+    global.logger = logger;
     let dbConnection = await connectDB();
-
+    global.db = dbConnection;
     let webServer = await startWebServer();
    
+    
     
     
 
     return new Promise((resolve)=>{
         if(logger && webServer && dbConnection){
-            global.db = dbConnection;
-            global.logger = logger;
+            
+            
             resolve("Successfully");
         }else{
             resolve("Failed");
