@@ -22,7 +22,7 @@ if( envFound.error ){
         dir_log_warn : process.env.LOG_WARN,
         dir_log_error : process.env.LOG_ERROR,
         dir_log : process.env.LOG,
-        secret_key : process.env.JWT_SECRTET_KEY,
+        secret_key : process.env.JWT_SECRET_KEY,
         token_duration : process.env.JWT_DURATION_TOKEN ,
         token_algorithm : process.env.JWT_ALGORITHM,
         salt_rounds : process.env.SALT_ROUNDS,

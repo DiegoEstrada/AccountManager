@@ -1,6 +1,9 @@
 {
   "name": "am-api",
   "version": "1.0.0",
+  "engines" : { 
+    "node" : "16.15.1" 
+  },
   "description": "API designed to manage users, accounts and trnasactions in a business",
   "main": "app.js",
   "scripts": {
