@@ -24,7 +24,7 @@ async function setUpPassportStategies() {
         passwordField: "password",
         session: false
     }, (email, password, done) => {
-        console.log("LOCAL " + email)
+        console.log("LOCAL " + email);
         //console.log("ejecutando *callback verify* de estategia local");
 
         listAllUsers.then(users => {
